@@ -174,18 +174,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Texto de apoyo -->
-            <TextView
-                android:id="@+id/tvAyudaAcceso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="10dp"
-                android:text="Acceso para administrador y operador"
-                android:textColor="#238B57"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
             <!-- Botón -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
@@ -229,17 +217,6 @@
             android:layout_width="28dp"
             android:layout_height="2dp"
             android:background="#238B57" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="TRAIN • TRACK • IMPROVE"
-            android:textColor="#66756E"
-            android:textSize="11sp"
-            android:textStyle="bold"
-            android:letterSpacing="0.08" />
 
         <View
             android:layout_width="28dp"

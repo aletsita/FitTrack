@@ -1,4 +1,4 @@
-package com.example.proyecto.ui.clientes
+package com.example.proyecto.ui.perfil
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,7 +9,7 @@ import com.example.proyecto.data.model.ClienteRequest
 import com.example.proyecto.data.repository.ClientesRepository
 import kotlinx.coroutines.launch
 
-class ClientesViewModel : ViewModel() {
+class PerfilViewModel : ViewModel() {
 
     private val repository = ClientesRepository()
 

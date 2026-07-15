@@ -26,9 +26,11 @@ class Principal : AppCompatActivity() {
     }
 
     private fun configurarViewPager() {
+
         viewPager.adapter = ViewPagerAdapter(this)
 
-        viewPager.offscreenPageLimit = 4
+        // Ahora son 6 pantallas
+        viewPager.offscreenPageLimit = 6
 
         viewPager.registerOnPageChangeCallback(
             object : ViewPager2.OnPageChangeCallback() {
@@ -36,30 +38,45 @@ class Principal : AppCompatActivity() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
 
-                    val itemId = when (position) {
+                    bottomNavigation.selectedItemId = when (position) {
+
                         PANTALLA_INICIO -> R.id.navInicio
-                        PANTALLA_CLIENTES -> R.id.navClientes
+
                         PANTALLA_RUTINAS -> R.id.navRutinas
+
+                        PANTALLA_CALENDARIO -> R.id.navCalendario
+
                         PANTALLA_PROGRESO -> R.id.navProgreso
+
                         PANTALLA_USUARIOS -> R.id.navUsuarios
+
+                        PANTALLA_PERFIL -> R.id.navPerfil
+
                         else -> R.id.navInicio
                     }
-
-                    bottomNavigation.selectedItemId = itemId
                 }
             }
         )
     }
 
     private fun configurarNavegacionInferior() {
+
         bottomNavigation.setOnItemSelectedListener { item ->
 
             val posicion = when (item.itemId) {
+
                 R.id.navInicio -> PANTALLA_INICIO
-                R.id.navClientes -> PANTALLA_CLIENTES
+
                 R.id.navRutinas -> PANTALLA_RUTINAS
+
+                R.id.navCalendario -> PANTALLA_CALENDARIO
+
                 R.id.navProgreso -> PANTALLA_PROGRESO
+
                 R.id.navUsuarios -> PANTALLA_USUARIOS
+
+                R.id.navPerfil -> PANTALLA_PERFIL
+
                 else -> PANTALLA_INICIO
             }
 
@@ -70,17 +87,28 @@ class Principal : AppCompatActivity() {
     }
 
     fun irAPantalla(posicion: Int) {
+
         if (posicion in 0 until TOTAL_PANTALLAS) {
+
             viewPager.setCurrentItem(posicion, true)
+
         }
     }
 
     companion object {
+
         const val PANTALLA_INICIO = 0
-        const val PANTALLA_CLIENTES = 1
-        const val PANTALLA_RUTINAS = 2
+
+        const val PANTALLA_RUTINAS = 1
+
+        const val PANTALLA_CALENDARIO = 2
+
         const val PANTALLA_PROGRESO = 3
+
         const val PANTALLA_USUARIOS = 4
-        const val TOTAL_PANTALLAS = 5
+
+        const val PANTALLA_PERFIL = 5
+
+        const val TOTAL_PANTALLAS = 6
     }
 }

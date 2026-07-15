@@ -76,9 +76,12 @@
 
                     <!-- Avatar del usuario con borde fino y mejor tipografía -->
                     <TextView
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
+                        android:id="@+id/btnAvatarPerfil"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:background="@drawable/fondo_icono_verde"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:text="A"
                         android:textColor="#FFFFFF"

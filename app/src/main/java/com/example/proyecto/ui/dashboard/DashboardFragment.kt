@@ -37,6 +37,7 @@ class DashboardFragment : Fragment() {
     private lateinit var cardEntrenadores: MaterialCardView
     private lateinit var cardProgreso: MaterialCardView
 
+    private lateinit var btnAvatarPerfil: TextView
 
     // ACCESOS RÁPIDOS
 
@@ -156,6 +157,11 @@ class DashboardFragment : Fragment() {
         btnVerRutinas = view.findViewById(
             R.id.btnVerRutinas
         )
+
+        btnAvatarPerfil =
+            view.findViewById(
+                R.id.btnAvatarPerfil
+            )
     }
 
 
@@ -212,7 +218,7 @@ class DashboardFragment : Fragment() {
         cardClientes.setOnClickListener {
 
             navegarA(
-                Principal.PANTALLA_CLIENTES
+                Principal.PANTALLA_CALENDARIO
             )
         }
 
@@ -232,7 +238,7 @@ class DashboardFragment : Fragment() {
         cardEntrenadores.setOnClickListener {
 
             navegarA(
-                Principal.PANTALLA_USUARIOS
+                Principal.PANTALLA_PERFIL
             )
         }
 
@@ -252,7 +258,7 @@ class DashboardFragment : Fragment() {
         btnVerClientes.setOnClickListener {
 
             navegarA(
-                Principal.PANTALLA_CLIENTES
+                Principal.PANTALLA_CALENDARIO
             )
         }
 
@@ -265,6 +271,14 @@ class DashboardFragment : Fragment() {
                 Principal.PANTALLA_RUTINAS
             )
         }
+
+        btnAvatarPerfil.setOnClickListener {
+            navegarA(
+                Principal.PANTALLA_PERFIL
+            )
+        }
+
+
     }
 
 
