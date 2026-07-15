@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F6F8"
+    android:fillViewport="true"
     android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="30dp">
+        android:paddingBottom="105dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,25 +26,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:letterSpacing="0.12"
                 android:text="PROGRESO"
-                android:textColor="#DDEFE5"
+                android:textColor="#9FD7B8"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Los resultados hablan."
+                android:layout_marginTop="7dp"
+                android:text="Cada minuto cuenta."
                 android:textColor="#FFFFFF"
-                android:textSize="27sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Visualiza el rendimiento de tus atletas."
+                android:text="Consulta tu objetivo, tiempo acumulado e historial."
                 android:textColor="#DDEFE5"
                 android:textSize="14sp" />
 
@@ -51,9 +55,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="18dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="22dp"
-            app:cardElevation="3dp">
+            app:cardBackgroundColor="#1F2933"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,20 +65,41 @@
                 android:orientation="vertical"
                 android:padding="22dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="OBJETIVO SEMANAL"
-                    android:textColor="#66756E"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="OBJETIVO SEMANAL"
+                        android:textColor="#9FD7B8"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnConfigurarObjetivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="CONFIGURAR"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#238B57"
+                        app:cornerRadius="14dp" />
+
+                </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tvPorcentajeSemanal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="78%"
-                    android:textColor="#1F2933"
+                    android:layout_marginTop="20dp"
+                    android:text="0%"
+                    android:textColor="#FFFFFF"
                     android:textSize="42sp"
                     android:textStyle="bold" />
 
@@ -83,18 +108,30 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="13dp"
                     android:max="100"
-                    android:progress="78"
-                    android:progressTint="#238B57" />
+                    android:progress="0"
+                    android:progressTint="#238B57"
+                    android:progressBackgroundTint="#3A454E" />
 
                 <TextView
+                    android:id="@+id/tvResumenObjetivo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="18 de 24 entrenamientos completados"
-                    android:textColor="#66756E"
+                    android:layout_marginTop="12dp"
+                    android:text="0 min de 5 horas"
+                    android:textColor="#C8D1CD"
                     android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvResumenSesiones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="0 de 4 sesiones"
+                    android:textColor="#9FD7B8"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -102,19 +139,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
+            android:layout_height="135dp"
             android:paddingStart="18dp"
-            android:paddingEnd="18dp">
+            android:paddingEnd="18dp"
+            android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
-                android:layout_height="145dp"
+                android:layout_height="match_parent"
                 android:layout_marginEnd="7dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#1F2933"
-                app:cardCornerRadius="20dp">
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:strokeColor="#E7ECE9"
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -124,18 +162,19 @@
                     android:padding="18dp">
 
                     <TextView
+                        android:id="@+id/tvTotalEntrenamientos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="18"
-                        android:textColor="#FFFFFF"
-                        android:textSize="35sp"
+                        android:text="0"
+                        android:textColor="#1F2933"
+                        android:textSize="33sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Entrenamientos"
-                        android:textColor="#D1D5DB"
+                        android:textColor="#78847E"
                         android:textSize="13sp" />
 
                 </LinearLayout>
@@ -144,7 +183,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
-                android:layout_height="145dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="7dp"
                 android:layout_weight="1"
                 app:cardBackgroundColor="#238B57"
@@ -158,18 +197,19 @@
                     android:padding="18dp">
 
                     <TextView
+                        android:id="@+id/tvTiempoAcumulado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="24.5h"
+                        android:text="0 min"
                         android:textColor="#FFFFFF"
-                        android:textSize="35sp"
+                        android:textSize="27sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tiempo entrenado"
-                        android:textColor="#FFFFFF"
+                        android:text="Tiempo semanal"
+                        android:textColor="#E5F4EC"
                         android:textSize="13sp" />
 
                 </LinearLayout>
@@ -182,22 +222,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="25dp"
-            android:text="Rendimiento reciente"
+            android:layout_marginTop="27dp"
+            android:text="Plan semanal"
             android:textColor="#1F2933"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvPlanSemanal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            android:background="#FFFFFF"
+            android:padding="18dp"
+            android:text="Todavía no has configurado un plan."
+            android:textColor="#52635B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="27dp"
+            android:text="Entrenamientos recientes"
+            android:textColor="#1F2933"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSinEntrenamientos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="18dp"
             android:background="#FFFFFF"
-            android:padding="20dp"
-            android:text="PUSH DAY                     +12%&#10;&#10;LEG DAY                       +8%&#10;&#10;CARDIO                          +15%"
-            android:textColor="#1F2933"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:padding="25dp"
+            android:text="Aún no has finalizado ningún entrenamiento."
+            android:textAlignment="center"
+            android:textColor="#78847E"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistorialEntrenamientos"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:layout_marginTop="13dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:visibility="gone"
+            tools:listitem="@layout/item_historial_entrenamiento" />
 
     </LinearLayout>
 

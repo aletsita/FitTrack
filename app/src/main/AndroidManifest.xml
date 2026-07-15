@@ -49,6 +49,14 @@
             </intent-filter>
 
         </activity>
+
+        <activity
+            android:name=".ui.progreso.objetivo.ConfigurarObjetivoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.progreso.detalle.DetalleSesionActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

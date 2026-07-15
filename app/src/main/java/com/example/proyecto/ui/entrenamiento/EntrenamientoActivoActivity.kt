@@ -10,6 +10,8 @@ import com.example.proyecto.R
 import com.google.android.material.button.MaterialButton
 import java.util.Locale
 import kotlin.random.Random
+import com.example.proyecto.data.model.SesionEntrenamiento
+import com.example.proyecto.data.repository.ProgresoRepository
 
 class EntrenamientoActivoActivity : AppCompatActivity() {
 
@@ -82,10 +84,16 @@ class EntrenamientoActivoActivity : AppCompatActivity() {
 
         configurarEventos()
 
+        fechaInicioEntrenamiento = System.currentTimeMillis()
+
         iniciarCronometro()
 
         iniciarFrecuenciaCardiaca()
     }
+
+    private var fechaInicioEntrenamiento: Long = 0L
+
+    private var seriesCompletadasTotal: Int = 0
 
 
     private fun inicializarComponentes() {
@@ -196,6 +204,8 @@ class EntrenamientoActivoActivity : AppCompatActivity() {
 
 
     private fun completarSerie() {
+
+        seriesCompletadasTotal++
 
         val ejercicio =
             ejercicios[indiceEjercicio]
@@ -393,7 +403,60 @@ class EntrenamientoActivoActivity : AppCompatActivity() {
 
         temporizadorDescanso?.cancel()
 
+        handlerCronometro.removeCallbacksAndMessages(null)
+
+        handlerFrecuencia.removeCallbacksAndMessages(null)
+
+        guardarSesionEntrenamiento()
+
         finish()
+    }
+
+    private fun guardarSesionEntrenamiento() {
+
+        val fechaFin =
+            System.currentTimeMillis()
+
+        val rutinaId =
+            intent.getIntExtra(
+                "RUTINA_ID",
+                0
+            )
+
+        val nombreRutina =
+            intent.getStringExtra(
+                "RUTINA_NOMBRE"
+            ) ?: "Entrenamiento"
+
+        val sesion =
+            SesionEntrenamiento(
+
+                rutinaId = rutinaId,
+
+                nombreRutina = nombreRutina,
+
+                fechaInicio = fechaInicioEntrenamiento,
+
+                fechaFin = fechaFin,
+
+                duracionSegundos = segundosTranscurridos,
+
+                ejerciciosCompletados = ejercicios.size,
+
+                seriesCompletadas = seriesCompletadasTotal,
+
+                frecuenciaPromedio =
+                    tvFrecuenciaCardiaca.text
+                        .toString()
+                        .replace(" BPM", "")
+                        .toIntOrNull()
+                        ?: 120
+            )
+
+        ProgresoRepository(this)
+            .guardarSesion(
+                sesion
+            )
     }
 
 
