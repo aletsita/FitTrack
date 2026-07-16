@@ -25,8 +25,7 @@ class PerfilFragment : Fragment() {
     private lateinit var tvObjetivo: TextView
     private lateinit var tvSmartwatch: TextView
 
-    private lateinit var repository:
-            PerfilRepository
+    private lateinit var repository: PerfilRepository
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,83 +45,70 @@ class PerfilFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
-        repository =
-            PerfilRepository(requireContext())
+        repository = PerfilRepository(requireContext())
 
-        tvAvatar =
-            view.findViewById(R.id.tvAvatarPerfil)
-
-        tvNombre =
-            view.findViewById(R.id.tvNombrePerfil)
-
-        tvRol =
-            view.findViewById(R.id.tvRolPerfil)
-
-        tvPeso =
-            view.findViewById(R.id.tvPesoPerfil)
-
-        tvAltura =
-            view.findViewById(R.id.tvAlturaPerfil)
-
-        tvImc =
-            view.findViewById(R.id.tvImcPerfil)
-
-        tvObjetivo =
-            view.findViewById(R.id.tvObjetivoPerfil)
-
-        tvSmartwatch =
-            view.findViewById(R.id.tvSmartwatchPerfil)
-
-        view.findViewById<MaterialButton>(
-            R.id.btnEditarPerfil
-        ).setOnClickListener {
-            startActivity(
-                Intent(
-                    requireContext(),
-                    EditarPerfilActivity::class.java
-                )
-            )
-        }
-
-        view.findViewById<MaterialButton>(
-            R.id.btnCerrarSesionPerfil
-        ).setOnClickListener {
-            val intent = Intent(
-                requireContext(),
-                MainActivity::class.java
-            )
-
-            intent.flags =
-                Intent.FLAG_ACTIVITY_NEW_TASK or
-                        Intent.FLAG_ACTIVITY_CLEAR_TASK
-
-            startActivity(intent)
-        }
+        inicializarVistas(view)
+        configurarEventos()
+        cargarPerfil()
     }
 
     override fun onResume() {
         super.onResume()
+        cargarPerfil()
+    }
 
-        if (this::repository.isInitialized) {
-            cargarPerfil()
-        }
+    private fun inicializarVistas(view: View) {
+
+        tvAvatar = view.findViewById(R.id.tvAvatarPerfil)
+        tvNombre = view.findViewById(R.id.tvNombrePerfil)
+        tvRol = view.findViewById(R.id.tvRolPerfil)
+        tvPeso = view.findViewById(R.id.tvPesoPerfil)
+        tvAltura = view.findViewById(R.id.tvAlturaPerfil)
+        tvImc = view.findViewById(R.id.tvImcPerfil)
+        tvObjetivo = view.findViewById(R.id.tvObjetivoPerfil)
+        tvSmartwatch = view.findViewById(R.id.tvSmartwatchPerfil)
+    }
+
+    private fun configurarEventos() {
+
+        view?.findViewById<MaterialButton>(R.id.btnEditarPerfil)
+            ?.setOnClickListener {
+
+                startActivity(
+                    Intent(
+                        requireContext(),
+                        EditarPerfilActivity::class.java
+                    )
+                )
+            }
+
+        view?.findViewById<MaterialButton>(R.id.btnCerrarSesionPerfil)
+            ?.setOnClickListener {
+
+                val intent = Intent(
+                    requireContext(),
+                    MainActivity::class.java
+                )
+
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+                startActivity(intent)
+            }
     }
 
     private fun cargarPerfil() {
-        val perfil =
-            repository.obtenerPerfil()
+
+        val perfil = repository.obtenerPerfil()
 
         tvAvatar.text =
-            perfil.nombre
-                .firstOrNull()
+            perfil.nombre.firstOrNull()
                 ?.uppercase()
                 ?: "U"
 
-        tvNombre.text =
-            perfil.nombre
-
-        tvRol.text =
-            perfil.rol
+        tvNombre.text = perfil.nombre
+        tvRol.text = perfil.rol
 
         tvPeso.text =
             String.format(
@@ -145,8 +131,7 @@ class PerfilFragment : Fragment() {
                 perfil.calcularImc()
             )
 
-        tvObjetivo.text =
-            perfil.objetivo
+        tvObjetivo.text = perfil.objetivo
 
         tvSmartwatch.text =
             if (perfil.smartwatchConectado) {
