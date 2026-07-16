@@ -66,4 +66,6 @@ dependencies {
     // RecyclerView (para el grid de clientes) + CardView
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.cardview:cardview:1.0.0")
+
+    implementation("com.google.android.gms:play-services-wearable:20.0.1")
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="fittrack_green">#6DBE45</color>
+    <color name="fittrack_dark_green">#4CAF50</color>
+
+    <color name="fittrack_black">#000000</color>
+    <color name="fittrack_dark">#121212</color>
+
+    <color name="fittrack_white">#FFFFFF</color>
+
+    <color name="fittrack_gray">#9E9E9E</color>
+    <color name="fittrack_light_gray">#D9D9D9</color>
+
+    <color name="fittrack_red">#F44336</color>
+
+</resources>
