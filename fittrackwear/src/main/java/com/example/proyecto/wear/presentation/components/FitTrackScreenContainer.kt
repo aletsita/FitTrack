@@ -1,5 +1,6 @@
 package com.example.proyecto.wear.presentation.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -9,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.wear.compose.material3.MaterialTheme
 
 @Composable
 fun FitTrackScreenContainer(
@@ -18,9 +20,10 @@ fun FitTrackScreenContainer(
     Column(
         modifier = modifier
             .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
             .padding(
-                horizontal = 22.dp,
-                vertical = 18.dp
+                horizontal = 20.dp,
+                vertical = 14.dp
             ),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,

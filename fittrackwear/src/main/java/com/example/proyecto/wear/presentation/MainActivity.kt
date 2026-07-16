@@ -6,15 +6,16 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import com.example.proyecto.wear.presentation.communication.PhoneMessageSender
 import com.example.proyecto.wear.presentation.communication.WearConstants
-import com.example.proyecto.wear.presentation.data.model.Entrenamiento
 import com.example.proyecto.wear.presentation.data.model.WorkoutScreen
 import com.example.proyecto.wear.presentation.data.model.WorkoutState
 import com.example.proyecto.wear.presentation.finished.WorkoutFinishedScreen
 import com.example.proyecto.wear.presentation.history.WorkoutHistoryScreen
 import com.example.proyecto.wear.presentation.home.HomeScreen
+import com.example.proyecto.wear.presentation.data.model.RoutineCatalog
 import com.example.proyecto.wear.presentation.paused.PausedWorkoutScreen
 import com.example.proyecto.wear.presentation.ready.ReadyWorkoutScreen
 import com.example.proyecto.wear.presentation.rest.RestScreen
+import com.example.proyecto.wear.presentation.routines.RoutineListScreen
 import com.example.proyecto.wear.presentation.service.HeartRateSimulator
 import com.example.proyecto.wear.presentation.service.RestTimer
 import com.example.proyecto.wear.presentation.service.WorkoutTimer
@@ -42,8 +43,20 @@ class MainActivity : ComponentActivity() {
                     onOpenHistory = {
                         WorkoutState.showHistory()
                     },
-                    onDemoWorkout = {
-                        prepararEntrenamiento()
+                    onSeeRoutines = {
+                        WorkoutState.showRoutineList()
+                    }
+                )
+            }
+
+            WorkoutScreen.ROUTINE_LIST -> {
+                RoutineListScreen(
+                    routines = RoutineCatalog.routines,
+                    onSelectRoutine = { entrenamiento ->
+                        WorkoutState.selectRoutine(entrenamiento)
+                    },
+                    onBack = {
+                        WorkoutState.showHome()
                     }
                 )
             }
@@ -55,7 +68,7 @@ class MainActivity : ComponentActivity() {
                         iniciarEntrenamiento()
                     },
                     onCancel = {
-                        WorkoutState.showHome()
+                        WorkoutState.showRoutineList()
                     }
                 )
             }
@@ -67,9 +80,6 @@ class MainActivity : ComponentActivity() {
                     heartRate = WorkoutState.heartRate,
                     onPause = {
                         pausarEntrenamiento()
-                    },
-                    onRest = {
-                        iniciarDescanso()
                     },
                     onFinish = {
                         finalizarEntrenamiento()
@@ -123,21 +133,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun prepararEntrenamiento() {
-        val entrenamiento = Entrenamiento(
-            nombreRutina = "Push Day",
-            ejercicioActual = "Press de banca",
-            siguienteEjercicio = "Press militar",
-            serieActual = 1,
-            totalSeries = 4,
-            repeticiones = 10,
-            totalEjercicios = 6,
-            duracionEstimadaMinutos = 45
-        )
-
-        WorkoutState.prepareWorkout(entrenamiento)
-    }
-
     private fun iniciarEntrenamiento() {
         WorkoutState.startWorkout()
         WorkoutTimer.start()
@@ -166,17 +161,6 @@ class MainActivity : ComponentActivity() {
         enviarMensajeAlTelefono(
             path = WearConstants.PATH_RESUME_WORKOUT,
             message = "RESUME"
-        )
-    }
-
-    private fun iniciarDescanso() {
-        WorkoutTimer.pause()
-        WorkoutState.startRest(45)
-        RestTimer.start(45)
-
-        enviarMensajeAlTelefono(
-            path = WearConstants.PATH_REST,
-            message = "REST"
         )
     }
 

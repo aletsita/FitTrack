@@ -33,6 +33,14 @@ object WorkoutState {
         phoneConnected = connected
     }
 
+    fun showRoutineList() {
+        currentScreen = WorkoutScreen.ROUTINE_LIST
+    }
+
+    fun selectRoutine(entrenamiento: Entrenamiento) {
+        prepareWorkout(entrenamiento)
+    }
+
     fun prepareWorkout(entrenamiento: Entrenamiento = Entrenamiento()) {
         workout = entrenamiento
         elapsedSeconds = 0L

@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-07-16T06:46:33.600408600Z">
+        <DropdownSelection timestamp="2026-07-16T10:15:48.254231800Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\alexa\.android\avd\Wear_OS_XL_Round.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\emili\.android\avd\Pixel_6a.avd" />
             </handle>
           </Target>
         </DropdownSelection>
@@ -15,10 +15,10 @@
       </SelectionState>
       <SelectionState runConfigName="fittrackwear">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-07-16T04:47:15.927506200Z">
+        <DropdownSelection timestamp="2026-07-16T10:15:44.716205700Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="Default" identifier="serial=127.0.0.1:21503;connection=fdb325a7" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\emili\.android\avd\Pixel_6a.avd" />
             </handle>
           </Target>
         </DropdownSelection>
