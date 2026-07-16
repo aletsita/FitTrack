@@ -5,14 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
+    android:layout_marginBottom="14dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
-    app:cardBackgroundColor="#FFFFFF"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="2dp"
-    app:strokeColor="#E7ECE9"
+    app:cardBackgroundColor="#151B26"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#263242"
     app:strokeWidth="1dp">
 
     <LinearLayout
@@ -20,23 +20,27 @@
         android:layout_height="100dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="18dp">
+
+        <!-- Avatar -->
 
         <TextView
             android:id="@+id/tvInicialUsuario"
-            android:layout_width="54dp"
-            android:layout_height="54dp"
-            android:background="@drawable/fondo_icono_verde"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/fondo_icono_azul"
             android:gravity="center"
             android:text="A"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
+
+        <!-- Información -->
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -45,55 +49,67 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Alexa Gastélum"
-                android:textColor="#1F2933"
-                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvCorreoUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="5dp"
                 android:maxLines="1"
                 android:text="alexa@fittrack.com"
-                android:textColor="#66756E"
+                android:textColor="#8D99A8"
                 android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/tvRolUsuarioItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/fondo_chip_hoy"
+                android:paddingStart="10dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="4dp"
                 android:text="ADMINISTRADOR"
-                android:textColor="#238B57"
-                android:textSize="11sp"
+                android:textColor="#2F7BFF"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
+        <!-- Estado -->
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvEstadoUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/fondo_icono_azul"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
                 android:text="ACTIVO"
-                android:textColor="#238B57"
-                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="12dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
                 android:contentDescription="Editar usuario"
                 android:src="@drawable/ic_arrow_right"
-                app:tint="#78847E" />
+                app:tint="#6FA7FF" />
 
         </LinearLayout>
 

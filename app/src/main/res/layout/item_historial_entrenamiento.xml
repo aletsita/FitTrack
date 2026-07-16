@@ -5,36 +5,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="11dp"
+    android:layout_marginBottom="14dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
-    app:cardBackgroundColor="#FFFFFF"
-    app:cardCornerRadius="19dp"
-    app:cardElevation="2dp"
-    app:strokeColor="#E7ECE9"
+    app:cardBackgroundColor="#151B26"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#263242"
     app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="98dp"
+        android:layout_height="100dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="18dp">
+
+        <!-- Icono -->
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/fondo_icono_verde"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/fondo_icono_azul"
             android:contentDescription="Entrenamiento"
-            android:padding="12dp"
+            android:padding="14dp"
             android:src="@drawable/ic_fitness"
             app:tint="#FFFFFF" />
+
+        <!-- Información -->
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
+            android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -43,37 +47,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Push Day"
-                android:textColor="#1F2933"
-                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvHistorialFecha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="5dp"
                 android:text="15 de julio de 2026"
-                android:textColor="#78847E"
-                android:textSize="12sp" />
+                android:textColor="#8D99A8"
+                android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/tvHistorialResumen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="6dp"
                 android:text="52 min • 4 ejercicios"
-                android:textColor="#238B57"
-                android:textSize="12sp"
+                android:textColor="#2F7BFF"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
+        <!-- Flecha -->
+
         <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:contentDescription="Ver detalle"
             android:src="@drawable/ic_arrow_right"
-            app:tint="#78847E" />
+            app:tint="#6FA7FF" />
 
     </LinearLayout>
 

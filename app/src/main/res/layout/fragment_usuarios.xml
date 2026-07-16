@@ -1,74 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6F8">
+    android:background="#070B12">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- ENCABEZADO -->
+        <!-- HEADER -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/fondo_encabezado_dashboard"
             android:orientation="vertical"
-            android:paddingStart="22dp"
-            android:paddingTop="28dp"
-            android:paddingEnd="22dp"
-            android:paddingBottom="28dp">
+            android:paddingStart="24dp"
+            android:paddingTop="32dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="30dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:letterSpacing="0.12"
+                android:letterSpacing="0.15"
                 android:text="ADMINISTRACIÓN"
-                android:textColor="#9FD7B8"
+                android:textColor="#2F7BFF"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Controla tu equipo"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="Controla tu equipo."
-                android:textColor="#FFFFFF"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:text="Gestiona administradores y operadores de FitTrack."
-                android:textColor="#DDEFE5"
-                android:textSize="14sp" />
+                android:textColor="#B7C0CD"
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
-        <!-- RESUMEN -->
+        <!-- ================= RESUMEN ================= -->
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="18dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:orientation="horizontal">
+
+            <!-- TOTAL USUARIOS -->
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="7dp"
+                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#1F2933"
-                app:cardCornerRadius="20dp">
+                app:cardBackgroundColor="#151B26"
+                app:cardCornerRadius="22dp"
+                app:strokeColor="#263242"
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -82,28 +87,31 @@
                         android:layout_height="wrap_content"
                         android:text="0"
                         android:textColor="#FFFFFF"
-                        android:textSize="29sp"
-                        android:textStyle="bold" />
+                        android:textSize="32sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="USUARIOS"
-                        android:textColor="#C8D1CD"
+                        android:textColor="#8D99A8"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- USUARIOS ACTIVOS -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="7dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#238B57"
-                app:cardCornerRadius="20dp">
+                app:cardBackgroundColor="#2F7BFF"
+                app:cardCornerRadius="22dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -117,16 +125,17 @@
                         android:layout_height="wrap_content"
                         android:text="0"
                         android:textColor="#FFFFFF"
-                        android:textSize="29sp"
-                        android:textStyle="bold" />
+                        android:textSize="32sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="ACTIVOS"
-                        android:textColor="#E5F4EC"
+                        android:textColor="#DCE8FF"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -134,24 +143,25 @@
 
         </LinearLayout>
 
-        <!-- BUSCADOR -->
+        <!-- ================= BUSCADOR ================= -->
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="18dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:hint="Buscar por nombre, correo o rol"
-            app:boxBackgroundColor="#FFFFFF"
-            app:boxCornerRadiusBottomEnd="17dp"
-            app:boxCornerRadiusBottomStart="17dp"
-            app:boxCornerRadiusTopEnd="17dp"
-            app:boxCornerRadiusTopStart="17dp"
-            app:boxStrokeColor="#238B57"
+            app:boxBackgroundColor="#151B26"
+            app:boxStrokeColor="#2F7BFF"
+            app:hintTextColor="#8D99A8"
+            app:boxCornerRadiusTopStart="18dp"
+            app:boxCornerRadiusTopEnd="18dp"
+            app:boxCornerRadiusBottomStart="18dp"
+            app:boxCornerRadiusBottomEnd="18dp"
             app:startIconDrawable="@drawable/ic_people"
-            app:startIconTint="#238B57">
+            app:startIconTint="#2F7BFF">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etBuscarUsuario"
@@ -159,17 +169,19 @@
                 android:layout_height="56dp"
                 android:inputType="text"
                 android:singleLine="true"
-                android:textColor="#1F2933"
-                android:textColorHint="#8B9590" />
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8D99A8"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ================= TÍTULO ================= -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="18dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="20dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -183,32 +195,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Equipo FitTrack"
-                    android:textColor="#1F2933"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvCantidadResultados"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="4dp"
                     android:text="0 resultados"
-                    android:textColor="#78847E"
-                    android:textSize="13sp" />
+                    android:textColor="#8D99A8"
+                    android:textSize="13sp"/>
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/fondo_icono_azul"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="5dp"
                 android:text="SOLO ADMIN"
-                android:textColor="#238B57"
-                android:textSize="11sp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
-        <!-- LISTA -->
+        <!-- ================= LISTA ================= -->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvUsuarios"
@@ -216,48 +231,64 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:clipToPadding="false"
-            android:paddingStart="18dp"
-            android:paddingTop="13dp"
-            android:paddingEnd="18dp"
+            android:paddingStart="20dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="20dp"
             android:paddingBottom="105dp"
-            tools:listitem="@layout/item_usuario" />
+            tools:listitem="@layout/item_usuario"/>
+
+        <!-- ================= MENSAJE SIN USUARIOS ================= -->
 
         <TextView
             android:id="@+id/tvSinUsuarios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edittext_dark"
+            android:gravity="center"
+            android:padding="24dp"
             android:text="No hay usuarios registrados."
-            android:textAlignment="center"
-            android:textColor="#78847E"
+            android:textColor="#8D99A8"
             android:textSize="14sp"
-            android:visibility="gone" />
+            android:visibility="gone"/>
+
+        <!-- ================= LOADING ================= -->
 
         <ProgressBar
             android:id="@+id/progressUsuarios"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:indeterminateTint="#238B57"
-            android:visibility="gone" />
+            android:indeterminateTint="#2F7BFF"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
-    <!-- BOTÓN ADMIN -->
+    <!-- ================= BOTÓN NUEVO USUARIO ================= -->
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/btnNuevoUsuario"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:text="Nuevo usuario"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
+        android:textSize="15sp"
         android:textStyle="bold"
-        app:backgroundTint="#238B57"
+        app:backgroundTint="#2F7BFF"
+        app:cornerRadius="30dp"
         app:icon="@drawable/ic_manage_accounts"
-        app:iconTint="#FFFFFF" />
+        app:iconPadding="10dp"
+        app:iconTint="#FFFFFF"
+        app:rippleColor="#4C92FF"/>
 
 </FrameLayout>

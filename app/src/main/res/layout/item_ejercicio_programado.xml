@@ -5,18 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    app:cardBackgroundColor="#FFFFFF"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="2dp"
-    app:strokeColor="#E5EAE7"
+    android:layout_marginBottom="14dp"
+    app:cardBackgroundColor="#151B26"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#263242"
     app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="17dp">
+        android:padding="18dp">
+
+        <!-- CABECERA -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,19 +28,19 @@
 
             <TextView
                 android:id="@+id/tvNumeroEjercicio"
-                android:layout_width="43dp"
-                android:layout_height="43dp"
-                android:background="@drawable/fondo_icono_verde"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/fondo_icono_azul"
                 android:gravity="center"
                 android:text="01"
                 android:textColor="#FFFFFF"
-                android:textSize="13sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
+                android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -47,8 +49,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Press de banca"
-                    android:textColor="#1F2933"
-                    android:textSize="17sp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -56,65 +58,75 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="4 series · 10 repeticiones · 60 s"
-                    android:textColor="#78847E"
-                    android:textSize="12sp" />
+                    android:text="4 series • 10 repeticiones • 60 s"
+                    android:textColor="#8D99A8"
+                    android:textSize="13sp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
+        <!-- PESO -->
+
         <TextView
             android:id="@+id/tvPesoEjercicioProgramado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="57dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="10dp"
             android:text="Peso: 60 kg"
-            android:textColor="#238B57"
-            android:textSize="12sp"
+            android:textColor="#2F7BFF"
+            android:textSize="13sp"
             android:textStyle="bold" />
+
+        <!-- NOTAS -->
 
         <TextView
             android:id="@+id/tvNotasEjercicioProgramado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="57dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="6dp"
             android:text="Notas del ejercicio"
-            android:textColor="#66756E"
-            android:textSize="12sp"
+            android:textColor="#8D99A8"
+            android:textSize="13sp"
             android:visibility="gone" />
+
+        <!-- BOTONES -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="18dp"
             android:gravity="end"
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEditarEjercicio"
                 android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:text="EDITAR"
-                android:textColor="#238B57"
-                android:textSize="11sp"
+                android:layout_height="44dp"
+                android:text="Editar"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
                 android:textStyle="bold"
-                app:backgroundTint="#E9F5EE"
-                app:cornerRadius="13dp" />
+                app:backgroundTint="#2F7BFF"
+                app:cornerRadius="16dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEliminarEjercicio"
                 android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:layout_marginStart="8dp"
-                android:text="ELIMINAR"
-                android:textColor="#D95C5C"
-                android:textSize="11sp"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:text="Eliminar"
+                android:textAllCaps="false"
+                android:textColor="#FF6B81"
+                android:textSize="12sp"
                 android:textStyle="bold"
-                app:backgroundTint="#FCEEEE"
-                app:cornerRadius="13dp" />
+                app:backgroundTint="#1E2533"
+                app:cornerRadius="16dp"
+                app:strokeColor="#FF6B81"
+                app:strokeWidth="1dp" />
 
         </LinearLayout>
 

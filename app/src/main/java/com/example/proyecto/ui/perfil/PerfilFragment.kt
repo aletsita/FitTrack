@@ -66,7 +66,7 @@ class PerfilFragment : Fragment() {
         tvAltura = view.findViewById(R.id.tvAlturaPerfil)
         tvImc = view.findViewById(R.id.tvImcPerfil)
         tvObjetivo = view.findViewById(R.id.tvObjetivoPerfil)
-        tvSmartwatch = view.findViewById(R.id.tvSmartwatchPerfil)
+        tvSmartwatch = view.findViewById(R.id.tvEstadoWatch)
     }
 
     private fun configurarEventos() {
@@ -82,7 +82,7 @@ class PerfilFragment : Fragment() {
                 )
             }
 
-        view?.findViewById<MaterialButton>(R.id.btnCerrarSesionPerfil)
+        view?.findViewById<MaterialButton>(R.id.btnCerrarSesion)
             ?.setOnClickListener {
 
                 val intent = Intent(

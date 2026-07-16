@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6F8"
+    android:background="#070B12"
     android:fillViewport="true"
     android:scrollbars="none">
 
@@ -15,40 +15,44 @@
         android:orientation="vertical"
         android:paddingBottom="35dp">
 
+        <!-- ENCABEZADO -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/fondo_encabezado_dashboard"
             android:orientation="vertical"
-            android:padding="22dp">
+            android:padding="24dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:letterSpacing="0.12"
+                android:letterSpacing="0.15"
                 android:text="PROGRESO"
-                android:textColor="#9FD7B8"
+                android:textColor="#2F7BFF"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="Objetivo semanal."
+                android:layout_marginTop="8dp"
+                android:text="Objetivo semanal"
                 android:textColor="#FFFFFF"
-                android:textSize="29sp"
-                android:textStyle="bold" />
+                android:textSize="30sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
                 android:text="Configura el tiempo y las rutinas que deseas completar."
-                android:textColor="#DDEFE5"
-                android:textSize="14sp" />
+                android:textColor="#B7C0CD"
+                android:textSize="15sp"/>
 
         </LinearLayout>
+
+        <!-- CONTENIDO -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,32 +64,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Meta de entrenamiento"
-                android:textColor="#1F2933"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="18dp"
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="7dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:hint="Horas"
-                    app:boxBackgroundColor="#FFFFFF"
-                    app:boxStrokeColor="#238B57"
-                    app:suffixText="h">
+                    app:boxBackgroundColor="#151B26"
+                    app:boxStrokeColor="#2F7BFF"
+                    app:boxCornerRadiusTopStart="18dp"
+                    app:boxCornerRadiusTopEnd="18dp"
+                    app:boxCornerRadiusBottomStart="18dp"
+                    app:boxCornerRadiusBottomEnd="18dp"
+                    app:hintTextColor="#8AB5FF"
+                    app:suffixText="h"
+                    app:suffixTextColor="#2F7BFF">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etHorasObjetivo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#7E8795"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,17 +105,24 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="7dp"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:hint="Sesiones"
-                    app:boxBackgroundColor="#FFFFFF"
-                    app:boxStrokeColor="#238B57">
+                    app:boxBackgroundColor="#151B26"
+                    app:boxStrokeColor="#2F7BFF"
+                    app:boxCornerRadiusTopStart="18dp"
+                    app:boxCornerRadiusTopEnd="18dp"
+                    app:boxCornerRadiusBottomStart="18dp"
+                    app:boxCornerRadiusBottomEnd="18dp"
+                    app:hintTextColor="#8AB5FF">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etSesionesObjetivo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#7E8795"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,121 +131,150 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="28dp"
                 android:text="Días de entrenamiento"
-                android:textColor="#1F2933"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <CheckBox
                 android:id="@+id/cbLunes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Lunes" />
+                android:layout_marginTop="12dp"
+                android:buttonTint="#2F7BFF"
+                android:text="Lunes"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbMartes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Martes" />
+                android:buttonTint="#2F7BFF"
+                android:text="Martes"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbMiercoles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Miércoles" />
+                android:buttonTint="#2F7BFF"
+                android:text="Miércoles"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbJueves"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Jueves" />
+                android:buttonTint="#2F7BFF"
+                android:text="Jueves"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbViernes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Viernes" />
+                android:buttonTint="#2F7BFF"
+                android:text="Viernes"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbSabado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Sábado" />
+                android:buttonTint="#2F7BFF"
+                android:text="Sábado"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbDomingo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Domingo" />
+                android:buttonTint="#2F7BFF"
+                android:text="Domingo"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="30dp"
                 android:text="Rutinas planeadas"
-                android:textColor="#1F2933"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <CheckBox
                 android:id="@+id/cbPushDay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Push Day" />
+                android:layout_marginTop="12dp"
+                android:buttonTint="#2F7BFF"
+                android:text="Push Day"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbPullDay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Pull Day" />
+                android:buttonTint="#2F7BFF"
+                android:text="Pull Day"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbLegDay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Leg Day" />
+                android:buttonTint="#2F7BFF"
+                android:text="Leg Day"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <CheckBox
                 android:id="@+id/cbFullBody"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="#238B57"
-                android:text="Full Body" />
+                android:buttonTint="#2F7BFF"
+                android:text="Full Body"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnGuardarObjetivo"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="32dp"
                 android:text="GUARDAR OBJETIVO"
+                android:textAllCaps="false"
                 android:textColor="#FFFFFF"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                app:backgroundTint="#238B57"
-                app:cornerRadius="17dp" />
+                app:backgroundTint="#2F7BFF"
+                app:cornerRadius="20dp"
+                app:elevation="6dp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCancelarObjetivo"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginTop="10dp"
-                android:text="CANCELAR"
-                android:textColor="#1F2933"
+                android:layout_height="58dp"
+                android:layout_marginTop="14dp"
+                android:text="Cancelar"
+                android:textAllCaps="false"
+                android:textColor="#2F7BFF"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                app:backgroundTint="#FFFFFF"
-                app:cornerRadius="17dp"
-                app:strokeColor="#DDE3E0"
-                app:strokeWidth="1dp" />
+                app:backgroundTint="#151B26"
+                app:cornerRadius="20dp"
+                app:strokeColor="#2F7BFF"
+                app:strokeWidth="1dp"/>
 
         </LinearLayout>
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://tools.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
+    android:background="#070B12"
     tools:context=".ui.dashboard.DashboardFragment">
 
     <ScrollView
@@ -19,9 +19,8 @@
             android:orientation="vertical"
             android:paddingBottom="36dp">
 
-            <!-- ====================================================== -->
-            <!-- ENCABEZADO -->
-            <!-- ====================================================== -->
+            <!-- ===================== HEADER ===================== -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="270dp"
@@ -49,19 +48,19 @@
                             android:layout_height="wrap_content"
                             android:letterSpacing="0.15"
                             android:text="FITTRACK"
-                            android:textColor="#A8E0C1"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
+                            android:textColor="#2F7BFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:id="@+id/tvSaludo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
+                            android:layout_marginTop="8dp"
                             android:textColor="#FFFFFF"
-                            android:textSize="28sp"
+                            android:textSize="30sp"
                             android:textStyle="bold"
-                            tools:text="¡Hola, Alexa!" />
+                            tools:text="¡Hola, Alexa!"/>
 
                         <TextView
                             android:id="@+id/tvRolUsuario"
@@ -69,24 +68,23 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Administrador de FitTrack"
-                            android:textColor="#E2F3E9"
-                            android:textSize="14sp" />
+                            android:textColor="#B7C0CD"
+                            android:textSize="14sp"/>
 
                     </LinearLayout>
 
-                    <!-- Avatar del usuario con borde fino y mejor tipografía -->
                     <TextView
                         android:id="@+id/btnAvatarPerfil"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:background="@drawable/fondo_icono_verde"
+                        android:background="@drawable/fondo_icono_azul"
                         android:clickable="true"
                         android:focusable="true"
                         android:gravity="center"
                         android:text="A"
                         android:textColor="#FFFFFF"
                         android:textSize="22sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -97,14 +95,13 @@
                     android:layout_marginTop="24dp"
                     android:lineSpacingMultiplier="1.2"
                     android:text="El gimnasio está activo. Revisa el rendimiento de tus atletas y organiza los entrenamientos."
-                    android:textColor="#E8F5EE"
-                    android:textSize="14sp" />
+                    android:textColor="#B7C0CD"
+                    android:textSize="14sp"/>
 
             </LinearLayout>
 
-            <!-- ====================================================== -->
-            <!-- CONTENIDO CON DESPLAZAMIENTO NEGATIVO -->
-            <!-- ====================================================== -->
+            <!-- CONTENIDO -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,7 +110,8 @@
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp">
 
-                <!-- TARJETA EN VIVO (Héroe) -->
+                <!-- ================= TARJETA PRINCIPAL ================= -->
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardEntrenamientoHoy"
                     android:layout_width="match_parent"
@@ -121,17 +119,17 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
-                    app:cardBackgroundColor="#1A232C"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-                    app:strokeColor="#2E3A46"
+                    app:cardBackgroundColor="#151B26"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="5dp"
+                    app:strokeColor="#263242"
                     app:strokeWidth="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="20dp">
+                        android:padding="22dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -143,47 +141,47 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:letterSpacing="0.1"
+                                android:letterSpacing="0.12"
                                 android:text="ACTIVIDAD DE HOY"
-                                android:textColor="#9FD7B8"
-                                android:textSize="11sp"
-                                android:textStyle="bold" />
+                                android:textColor="#2F7BFF"
+                                android:textSize="12sp"
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/fondo_icono_verde"
-                                android:paddingStart="10dp"
-                                android:paddingTop="4dp"
-                                android:paddingEnd="10dp"
-                                android:paddingBottom="4dp"
+                                android:background="@drawable/fondo_icono_azul"
+                                android:paddingStart="12dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="12dp"
+                                android:paddingBottom="5dp"
                                 android:text="EN VIVO"
                                 android:textColor="#FFFFFF"
                                 android:textSize="10sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
+                            android:layout_marginTop="20dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="56dp"
-                                android:layout_height="56dp"
-                                android:background="@drawable/fondo_icono_verde"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/fondo_icono_azul"
                                 android:contentDescription="Entrenamientos"
-                                android:padding="14dp"
+                                android:padding="16dp"
                                 android:src="@drawable/ic_fitness"
-                                app:tint="#FFFFFF" />
+                                app:tint="#FFFFFF"/>
 
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
+                                android:layout_marginStart="18dp"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
 
@@ -193,16 +191,17 @@
                                     android:layout_height="wrap_content"
                                     android:text="12"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="36sp"
-                                    android:textStyle="bold" />
+                                    android:textSize="38sp"
+                                    android:textStyle="bold"/>
 
                                 <TextView
                                     android:id="@+id/tvEntrenamientosHoy"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="sesiones programadas"
-                                    android:textColor="#B0BEC5"
-                                    android:textSize="14sp" />
+                                    android:layout_marginTop="2dp"
+                                    android:text="Sesiones programadas"
+                                    android:textColor="#8D99A8"
+                                    android:textSize="14sp"/>
 
                             </LinearLayout>
 
@@ -211,13 +210,13 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_marginTop="16dp"
-                            android:background="#2E3A46" />
+                            android:layout_marginTop="18dp"
+                            android:background="#263242"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="16dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -227,17 +226,16 @@
                                 android:layout_weight="1"
                                 android:text="Mantén al equipo en movimiento"
                                 android:textColor="#FFFFFF"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
+                                android:textSize="14sp"
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:letterSpacing="0.05"
-                                android:text="FITTRACK TEAM"
-                                android:textColor="#9FD7B8"
-                                android:textSize="10sp"
-                                android:textStyle="bold" />
+                                android:text="FITTRACK"
+                                android:textColor="#2F7BFF"
+                                android:textSize="11sp"
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 
@@ -245,13 +243,12 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- ================================================== -->
-                <!-- SECCIÓN: RESUMEN DEL GIMNASIO -->
-                <!-- ================================================== -->
+                <!-- ================= RESUMEN DEL GYM ================= -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="30dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -265,54 +262,52 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Resumen del gym"
-                            android:textColor="#1A202C"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:textColor="#FFFFFF"
+                            android:textSize="22sp"
+                            android:textStyle="bold"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="4dp"
                             android:text="Rendimiento general de FitTrack"
-                            android:textColor="#718096"
-                            android:textSize="13sp" />
+                            android:textColor="#8D99A8"
+                            android:textSize="13sp"/>
 
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#E8F5EE"
-                        android:paddingHorizontal="10dp"
-                        android:paddingVertical="4dp"
+                        android:background="@drawable/fondo_icono_azul"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="5dp"
                         android:text="HOY"
-                        android:textColor="#238B57"
+                        android:textColor="#FFFFFF"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
-                <!-- METRICAS: FILA 1 (Clientes y Rutinas) -->
+                <!-- ================= FILA 1 ================= -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:baselineAligned="false"
+                    android:layout_marginTop="18dp"
                     android:orientation="horizontal">
+
+                    <!-- CLIENTES -->
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cardClientes"
                         android:layout_width="0dp"
                         android:layout_height="160dp"
-                        android:layout_marginEnd="6dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:foreground="?attr/selectableItemBackground"
-                        app:cardBackgroundColor="#FFFFFF"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="0dp"
-                        app:strokeColor="#E2E8F0"
+                        app:cardBackgroundColor="#151B26"
+                        app:cardCornerRadius="22dp"
+                        app:strokeColor="#263242"
                         app:strokeWidth="1dp">
 
                         <LinearLayout
@@ -320,75 +315,71 @@
                             android:layout_height="match_parent"
                             android:gravity="bottom"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="18dp">
 
                             <ImageView
-                                android:layout_width="42dp"
-                                android:layout_height="42dp"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
                                 android:background="@drawable/fondo_icono_azul"
-                                android:contentDescription="Clientes"
-                                android:padding="10dp"
+                                android:padding="12dp"
                                 android:src="@drawable/ic_people"
-                                app:tint="#FFFFFF" />
+                                app:tint="#FFFFFF"/>
 
                             <Space
                                 android:layout_width="1dp"
                                 android:layout_height="0dp"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"/>
 
                             <TextView
                                 android:id="@+id/tvTotalClientes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="48"
-                                android:textColor="#1A202C"
-                                android:textSize="28sp"
-                                android:textStyle="bold" />
+                                android:textColor="#FFFFFF"
+                                android:textSize="30sp"
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Atletas activos"
-                                android:textColor="#4A5568"
-                                android:textSize="13sp" />
+                                android:text="Atletas"
+                                android:textColor="#8D99A8"
+                                android:textSize="13sp"/>
 
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
 
+                    <!-- RUTINAS -->
+
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cardRutinas"
                         android:layout_width="0dp"
                         android:layout_height="160dp"
-                        android:layout_marginStart="6dp"
+                        android:layout_marginStart="8dp"
                         android:layout_weight="1"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:foreground="?attr/selectableItemBackground"
-                        app:cardBackgroundColor="#238B57"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="0dp">
+                        app:cardBackgroundColor="#2F7BFF"
+                        app:cardCornerRadius="22dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="bottom"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="18dp">
 
                             <ImageView
-                                android:layout_width="42dp"
-                                android:layout_height="42dp"
-                                android:background="@drawable/fondo_icono_naranja"
-                                android:contentDescription="Rutinas"
-                                android:padding="10dp"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="#4C92FF"
+                                android:padding="12dp"
                                 android:src="@drawable/ic_routine"
-                                app:tint="#FFFFFF" />
+                                app:tint="#FFFFFF"/>
 
                             <Space
                                 android:layout_width="1dp"
                                 android:layout_height="0dp"
-                                android:layout_weight="1" />
+                                android:layout_weight="1"/>
 
                             <TextView
                                 android:id="@+id/tvTotalRutinas"
@@ -396,15 +387,15 @@
                                 android:layout_height="wrap_content"
                                 android:text="15"
                                 android:textColor="#FFFFFF"
-                                android:textSize="28sp"
-                                android:textStyle="bold" />
+                                android:textSize="30sp"
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Rutinas activas"
-                                android:textColor="#E8F5EE"
-                                android:textSize="13sp" />
+                                android:text="Rutinas"
+                                android:textColor="#DCE8FF"
+                                android:textSize="13sp"/>
 
                         </LinearLayout>
 
@@ -412,127 +403,85 @@
 
                 </LinearLayout>
 
-                <!-- METRICAS: FILA 2 (Coaches y Progreso) -->
+                <!-- ================= FILA 2 ================= -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:baselineAligned="false"
+                    android:layout_marginTop="14dp"
                     android:orientation="horizontal">
+
+                    <!-- ENTRENADORES -->
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/cardEntrenadores"
                         android:layout_width="0dp"
                         android:layout_height="110dp"
-                        android:layout_marginEnd="6dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:foreground="?attr/selectableItemBackground"
-                        app:cardBackgroundColor="#1A232C"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:layout_width="42dp"
-                                android:layout_height="42dp"
-                                android:background="@drawable/fondo_icono_morado"
-                                android:contentDescription="Entrenadores"
-                                android:padding="10dp"
-                                android:src="@drawable/ic_trainer"
-                                app:tint="#FFFFFF" />
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="12dp"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/tvTotalEntrenadores"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="8"
-                                    android:textColor="#FFFFFF"
-                                    android:textSize="24sp"
-                                    android:textStyle="bold" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Coaches"
-                                    android:textColor="#B0BEC5"
-                                    android:textSize="12sp" />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/cardProgreso"
-                        android:layout_width="0dp"
-                        android:layout_height="110dp"
-                        android:layout_marginStart="6dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:foreground="?attr/selectableItemBackground"
-                        app:cardBackgroundColor="#FFFFFF"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="0dp"
-                        app:strokeColor="#E2E8F0"
+                        app:cardBackgroundColor="#151B26"
+                        app:cardCornerRadius="22dp"
+                        app:strokeColor="#263242"
                         app:strokeWidth="1dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:padding="16dp">
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="42dp"
-                                android:layout_height="42dp"
-                                android:background="@drawable/fondo_icono_rojo"
-                                android:contentDescription="Progreso"
-                                android:padding="10dp"
-                                android:src="@drawable/ic_fitness"
-                                app:tint="#FFFFFF" />
-
-                            <LinearLayout
-                                android:layout_width="0dp"
+                            <TextView
+                                android:id="@+id/tvTotalEntrenadores"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="12dp"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
+                                android:text="8"
+                                android:textColor="#FFFFFF"
+                                android:textSize="28sp"
+                                android:textStyle="bold"/>
 
-                                <TextView
-                                    android:id="@+id/tvProgresoPromedio"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="78%"
-                                    android:textColor="#1A202C"
-                                    android:textSize="24sp"
-                                    android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Coaches"
+                                android:textColor="#8D99A8"/>
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Progreso"
-                                    android:textColor="#4A5568"
-                                    android:textSize="12sp" />
+                        </LinearLayout>
 
-                            </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- PROGRESO -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardProgreso"
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#151B26"
+                        app:cardCornerRadius="22dp"
+                        app:strokeColor="#263242"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvProgresoPromedio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="78%"
+                                android:textColor="#2F7BFF"
+                                android:textSize="28sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Progreso"
+                                android:textColor="#8D99A8"/>
 
                         </LinearLayout>
 
@@ -540,56 +489,55 @@
 
                 </LinearLayout>
 
-                <!-- ================================================== -->
-                <!-- SECCIÓN: ACCIONES RÁPIDAS -->
-                <!-- ================================================== -->
+                <!-- ================= ACCIONES RÁPIDAS ================= -->
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="34dp"
                     android:text="¿Qué quieres hacer?"
-                    android:textColor="#1A202C"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="4dp"
                     android:text="Accede rápidamente a las herramientas del gimnasio"
-                    android:textColor="#718096"
-                    android:textSize="13sp" />
+                    android:textColor="#8D99A8"
+                    android:textSize="13sp"/>
 
-                <!-- BOTÓN: CLIENTES -->
+                <!-- MIS ATLETAS -->
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnVerClientes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="18dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp"
-                    app:strokeColor="#E2E8F0"
+                    app:cardBackgroundColor="#151B26"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="5dp"
+                    app:strokeColor="#263242"
                     app:strokeWidth="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="82dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingHorizontal="16dp">
+                        android:paddingHorizontal="18dp">
 
                         <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:background="@drawable/fondo_icono_azul"
-                            android:contentDescription="Clientes"
                             android:padding="12dp"
                             android:src="@drawable/ic_people"
-                            app:tint="#FFFFFF" />
+                            app:tint="#FFFFFF"/>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -602,61 +550,61 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Mis atletas"
-                                android:textColor="#1A202C"
+                                android:textColor="#FFFFFF"
                                 android:textSize="16sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:text="Consulta clientes y su información"
-                                android:textColor="#718096"
-                                android:textSize="12sp" />
+                                android:textColor="#8D99A8"
+                                android:textSize="12sp"/>
 
                         </LinearLayout>
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:contentDescription="Abrir"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
                             android:src="@drawable/ic_arrow_right"
-                            app:tint="#238B57" />
+                            app:tint="#2F7BFF"/>
 
                     </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- BOTÓN: RUTINAS -->
+                <!-- RUTINAS -->
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnVerRutinas"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="28dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="0dp"
-                    app:strokeColor="#E2E8F0"
+                    app:cardBackgroundColor="#151B26"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="5dp"
+                    app:strokeColor="#263242"
                     app:strokeWidth="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="82dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingHorizontal="16dp">
+                        android:paddingHorizontal="18dp">
 
                         <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:background="@drawable/fondo_icono_naranja"
-                            android:contentDescription="Rutinas"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/fondo_icono_azul"
                             android:padding="12dp"
                             android:src="@drawable/ic_routine"
-                            app:tint="#FFFFFF" />
+                            app:tint="#FFFFFF"/>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -669,26 +617,25 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Zona de entrenamiento"
-                                android:textColor="#1A202C"
+                                android:textColor="#FFFFFF"
                                 android:textSize="16sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="2dp"
                                 android:text="Gestiona planes y rutinas de ejercicio"
-                                android:textColor="#718096"
-                                android:textSize="12sp" />
+                                android:textColor="#8D99A8"
+                                android:textSize="12sp"/>
 
                         </LinearLayout>
 
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:contentDescription="Abrir"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
                             android:src="@drawable/ic_arrow_right"
-                            app:tint="#238B57" />
+                            app:tint="#2F7BFF"/>
 
                     </LinearLayout>
 

@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-07-16T04:13:27.878854800Z">
+        <DropdownSelection timestamp="2026-07-16T06:46:33.600408600Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\alexa\.android\avd\Wear_OS_XL_Round.avd" />
@@ -15,10 +15,10 @@
       </SelectionState>
       <SelectionState runConfigName="fittrackwear">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-07-16T04:13:46.962180900Z">
+        <DropdownSelection timestamp="2026-07-16T04:47:15.927506200Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\alexa\.android\avd\Wear_OS_XL_Round.avd" />
+              <DeviceId pluginId="Default" identifier="serial=127.0.0.1:21503;connection=fdb325a7" />
             </handle>
           </Target>
         </DropdownSelection>

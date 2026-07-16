@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6F8"
+    android:background="#070B12"
     android:scrollbars="none">
 
     <LinearLayout
@@ -21,16 +21,16 @@
             android:background="@drawable/fondo_encabezado_dashboard"
             android:gravity="bottom"
             android:orientation="vertical"
-            android:padding="22dp">
+            android:padding="24dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:letterSpacing="0.12"
+                android:letterSpacing="0.15"
                 android:text="FITTRACK TRAINING"
-                android:textColor="#9FD7B8"
+                android:textColor="#2F7BFF"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvDetalleNombreRutina"
@@ -40,7 +40,7 @@
                 android:text="PUSH DAY"
                 android:textColor="#FFFFFF"
                 android:textSize="34sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvDetalleDescripcionRutina"
@@ -48,8 +48,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="Pecho, hombro y tríceps"
-                android:textColor="#DDEFE5"
-                android:textSize="15sp" />
+                android:textColor="#B7C0CD"
+                android:textSize="15sp"/>
 
         </LinearLayout>
 
@@ -61,9 +61,11 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="-30dp"
             android:layout_marginEnd="18dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="#151B26"
             app:cardCornerRadius="24dp"
-            app:cardElevation="5dp">
+            app:cardElevation="6dp"
+            app:strokeColor="#263242"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,12 +81,12 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:text="NIVEL"
-                        android:textColor="#78847E"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="NIVEL"
+                        android:textColor="#8B97A8"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tvDetalleNivelRutina"
@@ -92,9 +94,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:text="Intermedio"
-                        android:textColor="#1F2933"
+                        android:textColor="#FFFFFF"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -109,9 +111,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="DURACIÓN"
-                        android:textColor="#78847E"
+                        android:textColor="#8B97A8"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tvDetalleDuracionRutina"
@@ -119,9 +121,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:text="60 min"
-                        android:textColor="#238B57"
+                        android:textColor="#2F7BFF"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -136,9 +138,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="EJERCICIOS"
-                        android:textColor="#78847E"
+                        android:textColor="#8B97A8"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tvDetalleEjerciciosRutina"
@@ -146,9 +148,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:text="6 ejercicios"
-                        android:textColor="#1F2933"
+                        android:textColor="#FFFFFF"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -164,113 +166,134 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="30dp"
             android:text="Plan de entrenamiento"
-            android:textColor="#1F2933"
-            android:textSize="21sp"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="5dp"
             android:text="Ejercicios incluidos en esta rutina"
-            android:textColor="#78847E"
-            android:textSize="13sp" />
+            android:textColor="#9AA5B5"
+            android:textSize="14sp"/>
+
+        <!-- EJERCICIO 1 -->
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="18dp"
             android:layout_marginEnd="18dp"
-            app:cardBackgroundColor="#1F2933"
-            app:cardCornerRadius="20dp">
+            app:cardBackgroundColor="#151B26"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#263242"
+            app:strokeWidth="1dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="01   Press de banca\n       4 series  •  10 repeticiones"
+                android:padding="22dp"
+                android:text="01   Press de banca&#10;       4 series • 10 repeticiones"
                 android:textColor="#FFFFFF"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <!-- EJERCICIO 2 -->
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="18dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="20dp"
-            app:strokeColor="#E7ECE9"
+            app:cardBackgroundColor="#151B26"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#263242"
             app:strokeWidth="1dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="02   Press militar\n       4 series  •  12 repeticiones"
-                android:textColor="#1F2933"
+                android:padding="22dp"
+                android:text="02   Press militar&#10;       4 series • 12 repeticiones"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <!-- EJERCICIO 3 -->
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="18dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="20dp"
-            app:strokeColor="#E7ECE9"
+            app:cardBackgroundColor="#151B26"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#263242"
             app:strokeWidth="1dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="03   Fondos de tríceps\n       3 series  •  12 repeticiones"
-                android:textColor="#1F2933"
+                android:padding="22dp"
+                android:text="03   Fondos de tríceps&#10;       3 series • 12 repeticiones"
+                android:textColor="#FFFFFF"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <!-- BOTÓN PRINCIPAL -->
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEmpezarEntrenamiento"
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="60dp"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="18dp"
             android:text="EMPEZAR ENTRENAMIENTO"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textStyle="bold"
-            app:backgroundTint="#238B57"
-            app:cornerRadius="18dp"
+            app:backgroundTint="#2F7BFF"
+            app:cornerRadius="22dp"
+            app:elevation="5dp"
             app:icon="@drawable/ic_fitness"
             app:iconGravity="textStart"
             app:iconPadding="12dp"
-            app:iconTint="#FFFFFF" />
+            app:iconTint="#FFFFFF"/>
+
+        <!-- BOTÓN SECUNDARIO -->
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVolverRutinas"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="58dp"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="14dp"
             android:layout_marginEnd="18dp"
-            android:text="VOLVER A RUTINAS"
-            android:textColor="#FFFFFF"
+            android:text="Volver a rutinas"
+            android:textAllCaps="false"
+            android:textColor="#2F7BFF"
+            android:textSize="16sp"
             android:textStyle="bold"
-            app:backgroundTint="#238B57"
-            app:cornerRadius="17dp" />
+            app:backgroundTint="#151B26"
+            app:cornerRadius="22dp"
+            app:strokeColor="#2F7BFF"
+            app:strokeWidth="1dp"/>
 
     </LinearLayout>
 

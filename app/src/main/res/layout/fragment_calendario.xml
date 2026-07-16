@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6F8">
+    android:background="#070B12">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,152 +20,194 @@
             android:orientation="vertical"
             android:paddingBottom="110dp">
 
+            <!-- HEADER -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/fondo_encabezado_dashboard"
                 android:orientation="vertical"
-                android:padding="22dp">
+                android:paddingStart="24dp"
+                android:paddingTop="32dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="30dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="0.12"
+                    android:letterSpacing="0.15"
                     android:text="CALENDARIO"
-                    android:textColor="#9FD7B8"
+                    android:textColor="#2F7BFF"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="Organiza tu semana."
+                    android:layout_marginTop="8dp"
+                    android:text="Organiza tu semana"
                     android:textColor="#FFFFFF"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="6dp"
                     android:text="Programa tus sesiones y mantén una rutina constante."
-                    android:textColor="#DDEFE5"
-                    android:textSize="14sp" />
+                    android:textColor="#B7C0CD"
+                    android:textSize="14sp"/>
 
             </LinearLayout>
+
+            <!-- ================= RESUMEN SEMANAL ================= -->
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="18dp"
-                app:cardBackgroundColor="#1F2933"
+                android:layout_margin="20dp"
+                app:cardBackgroundColor="#151B26"
                 app:cardCornerRadius="24dp"
-                app:cardElevation="4dp">
+                app:cardElevation="5dp"
+                app:strokeColor="#263242"
+                app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="21dp">
+                    android:padding="22dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="RESUMEN SEMANAL"
-                        android:textColor="#9FD7B8"
+                        android:textColor="#2F7BFF"
                         android:textSize="11sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tvResumenCalendario"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
+                        android:layout_marginTop="10dp"
                         android:text="3 entrenamientos programados"
                         android:textColor="#FFFFFF"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tvResumenCompletados"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="6dp"
                         android:text="0 completados"
-                        android:textColor="#C8D1CD"
-                        android:textSize="14sp" />
+                        android:textColor="#8D99A8"
+                        android:textSize="14sp"/>
 
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- ================= TÍTULO ================= -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginEnd="18dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Próximos entrenamientos"
-                    android:textColor="#1F2933"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Próximos entrenamientos"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Tus sesiones programadas"
+                        android:textColor="#8D99A8"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PLAN SEMANAL"
-                    android:textColor="#238B57"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/fondo_icono_azul"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="5dp"
+                    android:text="SEMANA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
+
+            <!-- ================= LISTA ================= -->
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvCalendario"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="18dp"
                 android:clipToPadding="false"
                 android:nestedScrollingEnabled="false"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                tools:listitem="@layout/item_entrenamiento_programado" />
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                tools:listitem="@layout/item_entrenamiento_programado"/>
 
             <TextView
                 android:id="@+id/tvCalendarioVacio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="18dp"
-                android:background="#FFFFFF"
-                android:padding="25dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/edittext_dark"
+                android:gravity="center"
+                android:padding="24dp"
                 android:text="No tienes entrenamientos programados."
-                android:textAlignment="center"
-                android:textColor="#78847E"
-                android:visibility="gone" />
+                android:textColor="#8D99A8"
+                android:textSize="14sp"
+                android:visibility="gone"/>
 
         </LinearLayout>
 
     </ScrollView>
 
+    <!-- BOTÓN FLOTANTE -->
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/btnProgramarEntrenamiento"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:text="Programar"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
+        android:textSize="15sp"
         android:textStyle="bold"
-        app:backgroundTint="#238B57"
+        app:backgroundTint="#2F7BFF"
+        app:cornerRadius="30dp"
         app:icon="@drawable/ic_routine"
-        app:iconTint="#FFFFFF" />
+        app:iconPadding="10dp"
+        app:iconTint="#FFFFFF"
+        app:rippleColor="#4C92FF" />
 
 </FrameLayout>
